@@ -1,10 +1,11 @@
 import requests
 import json
 import base64
+import os
 
 url = "https://dev90052.service-now.com/api/now/table/incident"
-username = "admin"
-password = "gaxT92CJKqhU"
+username = os.environ["SERVICENOW_USERNAME"]
+password = os.environ["SERVICENOW_PASSWORD"]
 room_id = "Y2lzY29zcGFyazovL3VzL1JPT00vYzg2ZjljMDAtNTY5Yi0xMWVjLThjNmUtYjE2MmM5MjUxYmVl"
 
 payload = {
